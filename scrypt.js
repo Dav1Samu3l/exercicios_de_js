@@ -146,24 +146,26 @@ console.log('---------------------');
 
 function mensagem(nota) {
     let mensagem;
-    if (nota <= 10) {
+    if (nota < 10) {
         mensagem = 'PÉSSIMO'
     }
-    else if (nota > 11 && nota < 30) {
+    else if (nota < 30) {
         mensagem = 'RUIM'
 
     }
-    else if (nota > 31 && nota < 50) {
+    else if (nota < 50) {
         mensagem = 'REGULAR'
     }
-    else if (nota > 51 && nota < 70) {
+    else if (nota < 70) {
         mensagem = 'MEDIANO'
     }
-    else if (nota > 71 && nota < 90) {
+    else if (nota < 90) {
         mensagem = 'ÓTIMO'
     }
-    else if (nota > 90) {
+    else if (nota >= 90) {
         mensagem = 'EXCELENTE'
+    } else {
+        return "digite uma nota entre 10 e 100"
     }
 
 
@@ -175,6 +177,7 @@ console.log(mensagem(21));
 console.log(mensagem(32));
 console.log(mensagem(72));
 console.log(mensagem(92));
+console.log(mensagem(-5));
 
 console.log('---------------------');
 
@@ -239,7 +242,7 @@ function idade1(arr) {
 
     } return [maior, menor]
 }
-console.log(idade1([20, 30, 40, , 50, 11, 10, 20, 31, 16, 14]))
+console.log(idade1([20, 30, 40, 50, 11, 10, 20, 31, 16, 14]))
 
 console.log('---------------------');
 
@@ -308,7 +311,6 @@ function semaforo(cor) {
         return "PROSSIGA!"
     }
 
-
 }
 console.log(semaforo("vermelho"));
 console.log(semaforo("amarelo"));
@@ -360,11 +362,11 @@ console.log(diferençaDosNumeros(7, 8));
 
 // 16. Escreva uma função que imprima os números de 1 (inclusive) a 10 (inclusive) em ordem crescente.
 
-function umADez(x) {
-    let numeros=[]
+function umADez() {
+    let numeros = []
     for (let i = 1; i <= 10; i++) {
-          numeros.push(i)
-          
+        numeros.push(i)
+
     }
     return numeros
 }
@@ -374,12 +376,11 @@ console.log(umADez());
 
 // 17. Escreva uma função que imprima os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente.
 
-function dezAUm(x) {
-    let numeros=[]
+function dezAUm() {
+    let numeros = []
     for (let i = 10; i >= 1; i--) {
-        numeros.push(i) 
-    
-    }
+        numeros.push(i)
+     }
     return numeros
 }
 console.log(dezAUm());
@@ -388,18 +389,19 @@ console.log(dezAUm());
 // 18. Escreva uma função que receba como parâmetro um array contendo números positivos e números negativos e que retorne em novos arrays quais são os números positivos e quais são os negativos
 
 function positivoEnegatios(arr) {
-    let negativo= new Array
+    let negativo = new Array
     let positivo = new Array
 
     for (let i = 0; i < arr.length; i++) {
-      if( arr[i] < 0){
-        negativo.push(arr[i])
-      } if (arr[i] > 0) {
-        positivo.push(arr[i])
-      }  
+        if (arr[i] < 0) {
+            negativo.push(arr[i])
+        } if (arr[i] > 0) {
+            positivo.push(arr[i])
+        }
 
     }
-    return [positivo , negativo]
+    return [positivo, negativo]
 
 }
-console.log(positivoEnegatios([-1,2, 65, 97, 82, 38, 57, 67, -12, 72, -86, 91, -54, 35, -1, 7, 21, 37, 42, 77, 3, 45, 60, 99, 16, 63, 39, 36, 85, 25, 10, -90, 18, 28, 70, 30, -89, 5, 31, 96, 81, -69, 23, 32, 76, 92, 29, -47, 74, 55, 100, 78 ] ));
+console.log(positivoEnegatios([-1, 2, 65, 97, 82, 38, 57, 67, -12, 72, -86, 91, -54, 35, -1, 7, 21, 37, 42, 77, 3, 45, 60, 99, 16, 63, 39, 36, 85, 25, 10, -90, 18, 28, 70, 30, -89, 5, 31, 96, 81, -69, 23, 32, 76, 92, 29, -47, 74, 55, 100, 78]));
+          
