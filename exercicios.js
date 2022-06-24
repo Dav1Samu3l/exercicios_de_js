@@ -152,8 +152,6 @@ console.log(sixToast(17));
 
 function tocaBnjo(params) {
  for (let i = 0; i < params.length; i++) {
-
-
    if(params[0].toUpperCase() == "R"){
      return `${params} esta tocando banjo `
    }else{
@@ -179,22 +177,6 @@ console.log(playBanjo('Raia'));
 
 
 
-
-function nome(x) {
-  let letra;
-  for (let i = 0; i < x.length; i++) {
-    if (x[i] == 'd') {
-       letra = 'sim'
-
-    }
-    else {
-     letra = 'nao'
-    }
-    return letra
-
-
-  }}
-  console.log(nome(["davi"]));
 
 /* se em algum lugar do comprimento da string tiver  a letra  "a", retorno a quantidade de "a"s que tem na string*/
 
